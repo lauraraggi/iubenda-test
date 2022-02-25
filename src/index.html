@@ -1,13 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Cookie Solution</title>
-	<link rel="stylesheet" href="scss/main.scss" />
-</head>
-<body>
- 
-</body>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IUBENDA: Cookie Solution Configurator</title>
+    <link rel="stylesheet" href="scss/main.scss" />
+    <script>
+      document.documentElement.className =
+        document.documentElement.className.replace("no-js", "js");
+    </script>
+  </head>
+  <body>
+    <main class="cs-configurator wrapper">
+      <header class="cs-configurator__header">
+        <div class="info-card">
+          <a class="info-card__title" href="#">www.domain.com</a>
+          <p class="info-card__subtitle">Account & billing info</p>
+        </div>
+        <div class="progress-ring-card">
+          <div class="progress-card__title">
+            <p>Your current compliance rating</p>
+            <div class="progress-card__ring">
+              <!-- Here goes the ring -->
+            </div>
+          </div>
+        </div>
+      </header>
+    </main>
+  </body>
 </html>
