@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IUBENDA: Cookie Solution Configurator</title>
-    <link rel="stylesheet" href="scss/main.scss" />
+    <link rel="stylesheet" href="./scss/main.scss" />
     <script>
       document.documentElement.className =
         document.documentElement.className.replace("no-js", "js");
@@ -27,6 +27,275 @@
           </div>
         </div>
       </header>
+      <div class="dialog-box dialog-box--success">
+        <svg
+          class="dialog-box__icn"
+          role="presentation"
+          aria-labelledby="checkmark-icon"
+        >
+          <title id="checkmark-icon">Success checkbox icon</title>
+          <use xlink:href="./img/sprite.svg#icon_checkmark" />
+        </svg>
+        <div class="dialog-box__description">
+          Your website has been created and your legal documents have been
+          generated. Setup your cookie banner and privacy policy button to
+          complete the integration.
+        </div>
+        <button type="button" class="close-cross" aria-label="close">
+          Close
+        </button>
+      </div>
+      <!-- dialog-box success -->
+      <form>
+		 <section class="cs-form">
+			 <fieldset class="cs-toggle cs-toggle--cookies">
+			   <legend class="cs-toggle__title">Add a cookie banner</legend>
+			   <label for="cookies-switch">
+				 <input type="checkbox" class="cs-toogle__switch" id="cookies-switch" name="cookies-switch" />
+				 Toggle cookie banner
+			   </label>
+			 </fieldset>
+			 <!-- Target fieldset with cs-options class to disable in bunch -->
+			 <section class="cs-options cs-options--cookies">
+			   <fieldset class="cs-options__block">
+				 <legend class="cs-options__title">Position</legend>
+				 <!-- <img src="" alt="" class="cs-options__img" /> -->
+			   </fieldset>
+			   <fieldset class="cs-options__block">
+				 <legend class="cs-options_title">Theme</legend>
+				 <div class="cs-options__items-wrapper">
+				   <div class="cs-options__item-container">
+					 <input
+					   type="radio"
+					   name="cs-cookies-theme"
+					   id="dark-theme"
+					   value="dark-theme"
+					 />
+					 <label for="dark-theme">Dark</label>
+				   </div>
+				   <div class="cs-options__item-container">
+					 <input
+					   type="radio"
+					   name="cs-cookies-theme"
+					   id="light-theme"
+					   value="light-theme"
+					 />
+					 <label for="light-theme">Light</label>
+				   </div>
+				   <div class="cs-options__item-container">
+					 <input
+					   type="radio"
+					   name="cs-cookies-theme"
+					   id="custom-theme"
+					   value="custom-theme"
+					 />
+					 <label for="custom-theme">Custom style</label>
+				   </div>
+				 </div>
+			   </fieldset>
+			   <fieldset class="cs-options__block">
+				 <legend class="cs-options_title">Legislation</legend>
+				 <div class="cs-options__items-wrapper">
+				   <div class="cs-options__item-container">
+					 <input
+					   type="radio"
+					   name="cs-cookies-legislation"
+					   id="gdpr-only"
+					   value="gdpr-only"
+					 />
+					 <label for="gdpr-only">GDPR Only</label>
+				   </div>
+				   <div class="cs-options__item-container">
+					 <input
+					   type="radio"
+					   name="cs-cookies-legislation"
+					   id="ccpa-only"
+					   value="ccpa-only"
+					 />
+					 <label for="ccpa-only">CCPA Only</label>
+				   </div>
+				   <div class="cs-options__item-container">
+					 <input
+					   type="radio"
+					   name="cs-cookies-legislation"
+					   id="gdpr-and-ccpa"
+					   value="gdpr-and-ccpa"
+					 />
+					 <label for="gdpr-and-ccpa">Both</label>
+				   </div>
+				 </div>
+			   </fieldset>
+			   <fieldset class="cs-options__block">
+				 <legend class="cs-options_title">Require consent from</legend>
+				 <div class="cs-options__items-wrapper">
+				   <div class="cs-options__item-container">
+					 <input
+					   type="radio"
+					   name="cs-cookies-consent"
+					   id="eu-only"
+					   value="eu-only"
+					 />
+					 <label for="eu-only">EU Only</label>
+				   </div>
+				   <div class="cs-options__item-container">
+					 <input
+					   type="radio"
+					   name="cs-cookies-consent"
+					   id="world-wide"
+					   value="world-wide"
+					 />
+					 <label for="world-wide">World Wide</label>
+				   </div>
+				 </div>
+			   </fieldset>
+			   <fieldset class="cs-options__block">
+				 <legend class="cs-options_title">Banner buttons</legend>
+				 <div class="cs-options__items-wrapper">
+				   <div class="cs-options__item-container">
+					 <input
+					   id="accept"
+					   type="checkbox"
+					   name="banner-btn"
+					   value="accept"
+					 />
+					 <label for="accept"
+					   >Explicit Accept and Customize buttons</label
+					 >
+				   </div>
+				   <div class="cs-options__item-container">
+					 <input
+					   id="reject"
+					   type="checkbox"
+					   name="banner-btn"
+					   value="reject"
+					 />
+					 <label for="reject">Explicit Reject button</label>
+				   </div>
+				 </div>
+			   </fieldset>
+			   <fieldset class="cs-options__block">
+				 <legend class="cs-options_title">Other options</legend>
+				 <div class="cs-options__items-wrapper">
+				   <div class="cs-options__item-container">
+					 <input
+					   id="iab"
+					   type="checkbox"
+					   name="cs-cookies-other-options"
+					   value="iab"
+					 />
+					 <label for="iab"
+					   >Enable IAB Transparency and Consent Framework &ndash;
+					   <a
+						 class="readmore"
+						 href="#"
+						 aria-label="Read more about IAB transparency"
+						 >Learn More</a
+					   ></label
+					 >
+					 <div class="dialog-box dialog-box--alert">
+					   <p>
+						 You may should activate this feature if you show ads on your
+						 website
+					   </p>
+					 </div>
+				   </div>
+				   <div class="cs-options__item-container">
+					 <input
+					   id="google-amp"
+					   type="checkbox"
+					   name="cs-cookies-other-options"
+					   value="google-amp"
+					 />
+					 <label for="google-amp"
+					   >Enable Google Amp support
+					   <a class="tooltip" href="#" data-tip="Tooltip info">
+						 <i class="question-mark-icn"></i>More info
+					   </a></label
+					 >
+				   </div>
+				   <div class="cs-options__item-container">
+					 <input
+					   id="block-scripts"
+					   type="checkbox"
+					   name="cs-cookies-other-options"
+					   value="block-scripts"
+					 />
+					 <label for="block-scripts"
+					   >Automatically block scripts detected by the plugin
+					   <a class="tooltip" href="#" data-tip="Tooltip info">
+						 <i class="question-mark-icn"></i>More info
+					   </a></label
+					 >
+				   </div>
+				 </div>
+			   </fieldset>
+			 </section>
+			 <fieldset class="cs-toggle cs-toggle--privacy-policy">
+			   <legend class="cs-toggle__title">Add the privacy policy button</legend>
+			   <label for="policy-switch">
+				 <input
+				   type="checkbox"
+				   id="policy-switch"
+				   name="policy-switch"
+				   
+				 />
+				 Toggle privacy policy
+			   </label>
+			 </fieldset>
+			 <section class="cs-options cs-options--privacy">
+				 <fieldset class="cs-options__block">
+				   <legend class="cs-options_title">Button style</legend>
+				   <div class="cs-options__items-wrapper">
+					 <div class="cs-options__item-container">
+					   <input
+						 type="radio"
+						 name="cs-privacy-btn-style"
+						 id="btn-light"
+						 value="btn-light"
+					   />
+					   <label for="btn-light">Light</label>
+					 </div>
+					 <div class="cs-options__item-container">
+					   <input
+						 type="radio"
+						 name="cs-privacy-btn-style"
+						 id="btn-dark"
+						 value="btn-dark"
+					   />
+					   <label for="btn-dark">Dark</label>
+					 </div>
+				   </div>
+				 </fieldset>
+				 <fieldset class="cs-options__block">
+				   <legend class="cs-options_title">Button position</legend>
+				   <div class="cs-options__items-wrapper">
+					 <div class="cs-options__item-container">
+					   <input
+						 type="radio"
+						 name="cs-privacy-btn-pos"
+						 id="privacy-in-footer"
+						 value="privacy-in-footer"
+					   />
+					   <label for="privacy-in-footer">Put automatically button on footer</label>
+					 </div>
+					 <input
+						 type="radio"
+						 name="cs-privacy-btn-pos"
+						 id="privacy-manual-btn"
+						 value="privacy-manual-btn"
+					   />
+					   <label for="privacy-manual-btn">Integrate button manually</label>
+					 </div>
+				   </div>
+				 </fieldset>
+			 </section>
+		 </section>
+		<section class="cs-form__buttons">
+			<input type="reset" value="Reset Settings">
+        	<input type="submit" value="Integrate">
+		</section>
+      </form>
     </main>
+    <script type="module" src="./scripts/app.js"></script>
   </body>
 </html>
