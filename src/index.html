@@ -31,7 +31,8 @@
         </div>
       </header>
       <div class="dialog-box dialog-box--success">
-		  <div class="dialog-box__tab">
+		  <div class="dialog-box__tab" aria-label="Checkmark icon">
+			  <title>Success dialog box checkmark icon</title>
 			  <svg><use class="dialog-box__icn" xlink:href="./img/sprite-icn.svg#icon_checkmark"></use></svg>
 		  </div>
         <div class="dialog-box__description">
@@ -48,14 +49,14 @@
     	</button>
       </div>
       <!-- dialog-box success -->
-      <form>
-		 <section class="cs-form">
-			 <fieldset class="cs-toggle cs-toggle--cookies">
-			   <legend class="cs-toggle__title">Add a cookie banner</legend>
-			   <label for="cookies-switch">
-				 <input type="checkbox" class="cs-toogle__switch" id="cookies-switch" name="cookies-switch" />
+      <form class="cs-form" id="cs-form">
+		 <section class="cs-form__container">
+			 <fieldset class="cs-form__field cs-toggle cs-toggle--cookies">   
+			   <input type="checkbox" class="cs-toogle__switch" id="cookies-switch" name="cookies-switch" />
+			   <label class="cs-toggle__label" for="cookies-switch">		 
 				 Toggle cookie banner
 			   </label>
+			   <h2 class="cs-toggle__title">Add a cookie banner</h2>
 			 </fieldset>
 			 <!-- Target fieldset with cs-options class to disable in bunch -->
 			 <section class="cs-options cs-options--cookies">
@@ -194,7 +195,7 @@
 						 >Learn More</a
 					   ></label
 					 >
-					 <div class="dialog-box dialog-box--alert">
+					 <div class="alert">
 					   <p>
 						 You may should activate this feature if you show ads on your
 						 website
@@ -232,17 +233,12 @@
 				 </div>
 			   </fieldset>
 			 </section>
-			 <fieldset class="cs-toggle cs-toggle--privacy-policy">
-			   <legend class="cs-toggle__title">Add the privacy policy button</legend>
-			   <label for="policy-switch">
-				 <input
-				   type="checkbox"
-				   id="policy-switch"
-				   name="policy-switch"
-				   
-				 />
-				 Toggle privacy policy
+			  <fieldset class="cs-form__field cs-toggle cs-toggle--privacy-policy">   
+			   <input type="checkbox" class="cs-toogle__switch" id="privacy-switch" name="privacy-switch" />
+			   <label class="cs-toggle__label" for="privacy-switch">		 
+				 Enable privacy policy button options 
 			   </label>
+			   <h2 class="cs-toggle__title">Add a privacy policy button</h2>
 			 </fieldset>
 			 <section class="cs-options cs-options--privacy">
 				 <fieldset class="cs-options__block">

@@ -1,5 +1,4 @@
 @use "../abstracts";
-@use "../components/dialog";
 
 html {
   font-size: 62.5%;
@@ -10,7 +9,7 @@ body {
   font-size: 1.6rem;
   display: flex;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   line-height: 1.4;
   font-weight: 400;
