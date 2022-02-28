@@ -3,7 +3,7 @@
 .cs-toggle {
   display: flex;
   align-items: center;
-  padding: 3rem 0;
+  margin-bottom: 2rem;
 
   &__title {
     margin-left: 30px;
@@ -37,6 +37,8 @@ input[type="checkbox"].cs-toogle__switch {
   height: 0;
   width: 0;
   visibility: hidden;
+  margin: 0;
+  padding: 0;
 
   &:checked + label.cs-toggle__label {
     background-color: abstracts.$iub-green;

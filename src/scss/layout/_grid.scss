@@ -1,0 +1,13 @@
+@use "../abstracts";
+
+.flex-grid {
+  display: flex;
+  flex: 1;
+}
+.col {
+  flex: 1;
+}
+
+.flex-grid-half .col {
+  flex-basis: 50%;
+}

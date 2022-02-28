@@ -3,3 +3,97 @@
 .cs-form {
   padding: 0 3rem;
 }
+
+.cs-options {
+  &__block {
+    margin-bottom: 2.5rem;
+  }
+
+  &__items-wrapper {
+    margin-top: abstracts.$legend-margin;
+  }
+}
+
+/* Base style for radio buttons */
+.radio-btn {
+  position: relative;
+  display: flex;
+  flex: 0 1 14rem;
+
+  &__title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    display: block;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  &.radio-btn--theme {
+    padding-bottom: 2rem;
+
+    & label {
+      height: 8rem;
+      background-position: 25px 10px;
+    }
+
+    & .label--dark {
+      background-image: url(../img/fake_banner_dark.png);
+    }
+
+    & .label--light {
+      background-image: url(../img/fake_banner_light.png);
+    }
+  }
+
+  &.radio-btn--privacy {
+    padding-bottom: 2rem;
+    & label {
+      height: 5rem;
+      background-position: 15px 10px;
+    }
+
+    & .label--dark {
+      background-image: url(../img/fake_button_dark.png);
+    }
+
+    & .label--light {
+      background-image: url(../img/fake_button_light.png);
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    column-gap: 1.5rem;
+    flex: 1;
+    flex-wrap: wrap;
+  }
+
+  & input {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+
+    &:checked + label {
+      border-color: abstracts.$iub-green;
+      box-shadow: 0 0 0 3px abstracts.$mint;
+    }
+  }
+
+  & label {
+    flex: 0 0 14rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    text-indent: -9999px;
+    border: 1px solid abstracts.$border-color;
+    border-radius: abstracts.$border-radius;
+    transition: 0.3s;
+  }
+}

@@ -65,36 +65,39 @@
 				 <!-- <img src="" alt="" class="cs-options__img" /> -->
 			   </fieldset>
 			   <fieldset class="cs-options__block">
-				 <legend class="cs-options_title">Theme</legend>
-				 <div class="cs-options__items-wrapper">
-				   <div class="cs-options__item-container">
-					 <input
-					   type="radio"
-					   name="cs-cookies-theme"
-					   id="dark-theme"
-					   value="dark-theme"
-					 />
-					 <label for="dark-theme">Dark</label>
-				   </div>
-				   <div class="cs-options__item-container">
-					 <input
-					   type="radio"
-					   name="cs-cookies-theme"
-					   id="light-theme"
-					   value="light-theme"
-					 />
-					 <label for="light-theme">Light</label>
-				   </div>
-				   <div class="cs-options__item-container">
-					 <input
-					   type="radio"
-					   name="cs-cookies-theme"
-					   id="custom-theme"
-					   value="custom-theme"
-					 />
-					 <label for="custom-theme">Custom style</label>
-				   </div>
-				 </div>
+				 <legend class="cs-options_title">Theme</legend>			
+					<div class="radio-btn__wrapper cs-options__items-wrapper">
+					   <div class="radio-btn radio-btn--theme ">
+						 <input
+						   type="radio"
+						   name="cs-cookies-theme"
+						   id="dark-theme"
+						   value="dark-theme"
+						 />
+						 <label class="label--dark" for="dark-theme">Dark</label>
+						 <span class="radio-btn__title">Dark</span>
+					   </div>
+					   <div class="radio-btn radio-btn--theme">
+						 <input
+						   type="radio"
+						   name="cs-cookies-theme"
+						   id="light-theme"
+						   value="light-theme"
+						 />
+						 <label class="label--light" for="light-theme">Light</label>
+						 <span class="radio-btn__title">Light</span>
+					   </div>
+					   <div class="radio-btn radio-btn radio-btn--theme">
+						 <input
+						   type="radio"
+						   name="cs-cookies-theme"
+						   id="custom-theme"
+						   value="custom-theme"
+						 />
+						 <label for="custom-theme">Custom style</label>
+						 <span class="radio-btn__title">Custom style</span>
+					   </div>
+					</div>
 			   </fieldset>
 			   <fieldset class="cs-options__block">
 				 <legend class="cs-options_title">Legislation</legend>
@@ -243,24 +246,26 @@
 			 <section class="cs-options cs-options--privacy">
 				 <fieldset class="cs-options__block">
 				   <legend class="cs-options_title">Button style</legend>
-				   <div class="cs-options__items-wrapper">
-					 <div class="cs-options__item-container">
+				   <div class="radio-btn__wrapper cs-options__items-wrapper">
+					 <div class="radio-btn radio-btn--privacy">
 					   <input
 						 type="radio"
 						 name="cs-privacy-btn-style"
 						 id="btn-light"
 						 value="btn-light"
 					   />
-					   <label for="btn-light">Light</label>
+					   <label class="label--light" for="btn-light">Light</label>
+					    <span class="radio-btn__title">Light</span>
 					 </div>
-					 <div class="cs-options__item-container">
+					 <div class="radio-btn radio-btn--privacy">
 					   <input
 						 type="radio"
 						 name="cs-privacy-btn-style"
 						 id="btn-dark"
 						 value="btn-dark"
 					   />
-					   <label for="btn-dark">Dark</label>
+					   <label class="label--dark" for="btn-dark">Dark</label>
+					    <span class="radio-btn__title">Dark</span>
 					 </div>
 				   </div>
 				 </fieldset>
