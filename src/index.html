@@ -10,10 +10,13 @@
       document.documentElement.className =
         document.documentElement.className.replace("no-js", "js");
     </script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
   </head>
   <body>
     <main class="cs-configurator wrapper">
-      <header class="cs-configurator__header">
+      <header class="cs-configurator__header padding-section">
         <div class="info-card">
           <a class="info-card__title" href="#">www.domain.com</a>
           <p class="info-card__subtitle">Account & billing info</p>
@@ -28,22 +31,21 @@
         </div>
       </header>
       <div class="dialog-box dialog-box--success">
-        <svg
-          class="dialog-box__icn"
-          role="presentation"
-          aria-labelledby="checkmark-icon"
-        >
-          <title id="checkmark-icon">Success checkbox icon</title>
-          <use xlink:href="./img/sprite.svg#icon_checkmark" />
-        </svg>
+		  <div class="dialog-box__tab">
+			  <svg><use class="dialog-box__icn" xlink:href="./img/sprite-icn.svg#icon_checkmark"></use></svg>
+		  </div>
         <div class="dialog-box__description">
           Your website has been created and your legal documents have been
           generated. Setup your cookie banner and privacy policy button to
           complete the integration.
         </div>
-        <button type="button" class="close-cross" aria-label="close">
-          Close
-        </button>
+	
+		<button class="dialog-box__close" aria-label="Close dialog">
+			<svg>
+				<title>Close dialog</title>
+				<use class="dialog-box__close-icon" xlink:href="./img/sprite-icn.svg#x-symbol"></use>
+			</svg>
+    	</button>
       </div>
       <!-- dialog-box success -->
       <form>

@@ -1,0 +1,67 @@
+@use "../abstracts";
+
+.dialog-box {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  margin: 3rem;
+  background-color: #fff;
+  border: 1px solid abstracts.$border-color;
+  border-radius: abstracts.$border-radius;
+  align-items: center;
+  position: relative;
+
+  &__tab {
+    padding: 1.5rem;
+    background-color: abstracts.$mint;
+    border-top-left-radius: abstracts.$border-radius;
+    border-bottom-left-radius: abstracts.$border-radius;
+    display: flex;
+    align-items: center;
+    color: abstracts.$iub-green;
+
+    & svg {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  &__icn {
+    stroke: currentColor;
+  }
+
+  &__description {
+    padding: 0 5rem;
+  }
+
+  &__close {
+    color: #fff;
+    border: 0;
+    border-radius: 100%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: opacity 0.5s;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    & > svg {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  &__close-icon {
+    fill: currentColor;
+  }
+}

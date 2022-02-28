@@ -1,0 +1,53 @@
+@use "../abstracts";
+@use "../components/dialog";
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: abstracts.$bg-grey;
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+  font-weight: 400;
+  color: abstracts.$copy-black;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Links a:hover */
+
+a {
+  &,
+  &:link {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &:hover,
+  &:active {
+    /* Styles here */
+    color: red;
+  }
+}
+
+.cs-configurator {
+  @include abstracts.toRem(flex-basis, 1400);
+  height: 100%;
+  background: #fff;
+  border-radius: abstracts.$border-radius;
+  margin-top: 10rem;
+  border: 1px solid #d6d6d6;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid abstracts.$border-color;
+  }
+}
