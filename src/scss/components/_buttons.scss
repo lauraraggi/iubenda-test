@@ -1,0 +1,112 @@
+@use "../abstracts";
+
+/*** 
+	Style for radio buttons
+***/
+
+.radio-btn {
+  position: relative;
+  display: flex;
+  flex: 0 1 14rem;
+
+  & label {
+    flex: 0 0 14rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 1px solid abstracts.$border-color;
+    border-radius: abstracts.$border-radius;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  &__title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    display: block;
+    font-size: 1.3rem;
+  }
+
+  &.radio-btn--theme {
+    padding-bottom: 2rem;
+
+    & label {
+      height: 8rem;
+      background-position: 25px 10px;
+      text-indent: -9999px;
+    }
+
+    & .label--dark {
+      background-image: url(../img/fake_banner_dark.png);
+    }
+
+    & .label--light {
+      background-image: url(../img/fake_banner_light.png);
+    }
+  }
+
+  &.radio-btn--privacy {
+    padding-bottom: 2rem;
+
+    & label {
+      height: 5rem;
+      background-position: 15px 10px;
+      text-indent: -9999px;
+    }
+
+    & .label--dark {
+      background-image: url(../img/fake_button_dark.png);
+    }
+
+    & .label--light {
+      background-image: url(../img/fake_button_light.png);
+    }
+  }
+
+  &.radio-btn--inlineIcn {
+    svg {
+      height: 3.2rem;
+      width: 3.2rem;
+      margin-right: 0.8rem;
+    }
+  }
+
+  &.radio-btn--small {
+    label {
+      height: 5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.3rem;
+      position: relative;
+    }
+
+    & input:checked + label {
+      color: abstracts.$iub-green;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    column-gap: 1.5rem;
+    flex: 1;
+    flex-wrap: wrap;
+  }
+
+  & input {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+
+    &:checked + label {
+      border-color: abstracts.$iub-green;
+      box-shadow: 0 0 0 3px abstracts.$mint;
+    }
+  }
+}

@@ -1,10 +1,24 @@
 @use "../abstracts";
 
+/*** 
+	General styles for form and input fields
+***/
+
 .cs-form {
   padding: 0 3rem;
+
+  &__container {
+    padding: 2rem 0;
+  }
 }
 
 .cs-options {
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+  &__title {
+    color: abstracts.$light-grey;
+    font-weight: bold;
+  }
   &__block {
     margin-bottom: 2.5rem;
   }
@@ -12,111 +26,52 @@
   &__items-wrapper {
     margin-top: abstracts.$legend-margin;
   }
-}
 
-/* Base style for radio buttons */
-.radio-btn {
-  position: relative;
-  display: flex;
-  flex: 0 1 14rem;
-
-  & label {
-    flex: 0 0 14rem;
-    background-repeat: no-repeat;
-    background-size: contain;
-    border: 1px solid abstracts.$border-color;
-    border-radius: abstracts.$border-radius;
-    transition: 0.3s;
-  }
-
-  &__title {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    display: block;
-    font-size: 1.3rem;
-  }
-
-  &.radio-btn--theme {
-    padding-bottom: 2rem;
-
-    & label {
-      height: 8rem;
-      background-position: 25px 10px;
-      text-indent: -9999px;
-    }
-
-    & .label--dark {
-      background-image: url(../img/fake_banner_dark.png);
-    }
-
-    & .label--light {
-      background-image: url(../img/fake_banner_light.png);
-    }
-  }
-
-  &.radio-btn--privacy {
-    padding-bottom: 2rem;
-
-    & label {
-      height: 5rem;
-      background-position: 15px 10px;
-      text-indent: -9999px;
-    }
-
-    & .label--dark {
-      background-image: url(../img/fake_button_dark.png);
-    }
-
-    & .label--light {
-      background-image: url(../img/fake_button_light.png);
-    }
-  }
-
-  &.radio-btn--inlineIcn {
-    svg {
-      height: 3.2rem;
-      width: 3.2rem;
-      margin-right: 0.8rem;
-    }
-  }
-
-  &.radio-btn--small {
-    label {
-      height: 5rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 1.3rem;
-      position: relative;
-    }
-
-    & input:checked + label {
-      color: abstracts.$iub-green;
-    }
-  }
-
-  &__wrapper {
+  &__radioItem {
     display: flex;
-    column-gap: 1.5rem;
-    flex: 1;
-    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    margin-bottom: 5px;
+
+    label {
+      margin-left: 1rem;
+    }
+
+    input[type="radio"] {
+      @extend .customInput;
+      border-radius: 100%;
+
+      &:checked {
+        background-image: url("data:image/svg+xml,%3Csvg%20version%3D%221.1%22%20id%3D%22Capa_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%0A%09%20viewBox%3D%220%200%2031.955%2031.955%22%20style%3D%22enable-background%3Anew%200%200%2031.955%2031.955%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cg%3E%0A%09%3Cpath%20style%3D%22fill%3A%2300ca8d%3B%22%20d%3D%22M27.25%2C4.655C20.996-1.571%2C10.88-1.546%2C4.656%2C4.706C-1.571%2C10.96-1.548%2C21.076%2C4.705%2C27.3%0A%09%09c6.256%2C6.226%2C16.374%2C6.203%2C22.597-0.051C33.526%2C20.995%2C33.505%2C10.878%2C27.25%2C4.655z%22%2F%3E%0A%09%3Cpath%20style%3D%22fill%3A%2300ca8d%3B%22%20d%3D%22M13.288%2C23.896l-1.768%2C5.207c2.567%2C0.829%2C5.331%2C0.886%2C7.926%2C0.17l-0.665-5.416%0A%09%09C17.01%2C24.487%2C15.067%2C24.5%2C13.288%2C23.896z%20M8.12%2C13.122l-5.645-0.859c-0.741%2C2.666-0.666%2C5.514%2C0.225%2C8.143l5.491-1.375%0A%09%09C7.452%2C17.138%2C7.426%2C15.029%2C8.12%2C13.122z%20M28.763%2C11.333l-4.965%2C1.675c0.798%2C2.106%2C0.716%2C4.468-0.247%2C6.522l5.351%2C0.672%0A%09%09C29.827%2C17.319%2C29.78%2C14.193%2C28.763%2C11.333z%20M11.394%2C2.883l1.018%2C5.528c2.027-0.954%2C4.356-1.05%2C6.442-0.288l1.583-5.137%0A%09%09C17.523%2C1.94%2C14.328%2C1.906%2C11.394%2C2.883z%22%2F%3E%0A%09%3Ccircle%20style%3D%22fill%3A%2300ca8d%3B%22%20cx%3D%2215.979%22%20cy%3D%2215.977%22%20r%3D%226.117%22%2F%3E%0A%3C%2Fg%3E%0A%3C%2Fsvg%3E");
+        background-size: 5px 5px;
+      }
+    }
   }
 
-  & input {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+  &__checkboxItem {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
 
-    &:checked + label {
-      border-color: abstracts.$iub-green;
-      box-shadow: 0 0 0 3px abstracts.$mint;
+    label {
+      margin-left: 1rem;
+    }
+
+    input[type="checkbox"] {
+      @extend .customInput;
+      border-radius: 4px;
+
+      &:checked {
+        background-image: url("data:image/svg+xml,%3Csvg%20version%3D%221.1%22%20id%3D%22Capa_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%0A%09%20width%3D%22495.426px%22%20height%3D%22495.426px%22%20fill%3D%22%2300ca8d%22%20stroke%3D%22%2300ca8d%22%20viewBox%3D%220%200%20495.426%20495.426%22%20style%3D%22enable-background%3Anew%200%200%20495.426%20495.426%3B%22%0A%09%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cg%3E%0A%09%3Cg%3E%0A%09%09%3Cpolygon%20points%3D%22405.584%2C43.295%20176.428%2C272.452%2089.84%2C185.865%200%2C275.706%2086.588%2C362.293%20176.428%2C452.131%20266.266%2C362.293%20%0A%09%09%09495.426%2C133.133%20%09%09%22%2F%3E%0A%09%3C%2Fg%3E%0A%3C%2Fg%3E%0A%3C%2Fsvg%3E");
+        background-size: 10px 10px;
+      }
+    }
+
+    label {
+      padding: 0.2rem;
+      flex: 1;
     }
   }
 }

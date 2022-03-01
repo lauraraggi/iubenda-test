@@ -70,3 +70,23 @@
     fill: currentColor;
   }
 }
+
+.alert {
+  background-color: #fff4e4;
+  color: abstracts.$light-red;
+  padding: 1rem 2rem;
+  position: relative;
+  margin: 20px 0 20px 10px;
+  display: table;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    bottom: 90%;
+    left: 0;
+    border-bottom: 10px solid #fff4e4;
+    border-right: 10px solid transparent;
+    border-left: 10px solid #fff4e4;
+    border-top: 10px solid transparent;
+  }
+}

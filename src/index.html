@@ -72,7 +72,7 @@
 				 <!-- <img src="" alt="" class="cs-options__img" /> -->
 			   </fieldset>
 			   <fieldset class="cs-options__block">
-				 <legend class="cs-options_title">Theme</legend>			
+				 <legend class="cs-options__title">Theme</legend>			
 					<div class="radio-btn__wrapper cs-options__items-wrapper">
 					   <div class="radio-btn radio-btn--theme ">
 						 <input
@@ -107,7 +107,7 @@
 					</div>
 			   </fieldset>
 			   <fieldset class="cs-options__block">
-				 <legend class="cs-options_title">Legislation</legend>
+				 <legend class="cs-options__title">Legislation</legend>
 				 <div class="radio-btn__wrapper cs-options__items-wrapper">
 				   <div class="radio-btn radio-btn--small">
 					 <input
@@ -139,7 +139,7 @@
 				 </div>
 			   </fieldset>
 			   <fieldset class="cs-options__block">
-				 <legend class="cs-options_title">Require consent from</legend>
+				 <legend class="cs-options__title">Require consent from</legend>
 				 <div class="radio-btn__wrapper cs-options__items-wrapper">
 				   <div class="radio-btn radio-btn--small radio-btn--inlineIcn">
 					 <input
@@ -162,9 +162,9 @@
 				 </div>
 			   </fieldset>
 			   <fieldset class="cs-options__block">
-				 <legend class="cs-options_title">Banner buttons</legend>
+				 <legend class="cs-options__title">Banner buttons</legend>
 				 <div class="cs-options__items-wrapper">
-				   <div class="cs-options__item-container">
+				   <div class="cs-options cs-options__checkboxItem">
 					 <input
 					   id="accept"
 					   type="checkbox"
@@ -175,7 +175,7 @@
 					   >Explicit Accept and Customize buttons</label
 					 >
 				   </div>
-				   <div class="cs-options__item-container">
+				   <div class="cs-options cs-options__checkboxItem">
 					 <input
 					   id="reject"
 					   type="checkbox"
@@ -187,9 +187,9 @@
 				 </div>
 			   </fieldset>
 			   <fieldset class="cs-options__block">
-				 <legend class="cs-options_title">Other options</legend>
+				 <legend class="cs-options__title">Other options</legend>
 				 <div class="cs-options__items-wrapper">
-				   <div class="cs-options__item-container">
+				   <div class="cs-options cs-options__checkboxItem">
 					 <input
 					   id="iab"
 					   type="checkbox"
@@ -205,14 +205,14 @@
 						 >Learn More</a
 					   ></label
 					 >
-					 <div class="alert">
+				   </div>
+				    <div class="alert">
 					   <p>
 						 You may should activate this feature if you show ads on your
 						 website
 					   </p>
 					 </div>
-				   </div>
-				   <div class="cs-options__item-container">
+				   <div class="cs-options cs-options__checkboxItem">
 					 <input
 					   id="google-amp"
 					   type="checkbox"
@@ -220,13 +220,13 @@
 					   value="google-amp"
 					 />
 					 <label for="google-amp"
-					   >Enable Google Amp support
+					   ><span>Enable Google Amp support</span>
 					   <a class="tooltip" href="#" data-tip="Tooltip info">
 						 <i class="question-mark-icn"></i>More info
 					   </a></label
 					 >
 				   </div>
-				   <div class="cs-options__item-container">
+				   <div class="cs-options cs-options__checkboxItem">
 					 <input
 					   id="block-scripts"
 					   type="checkbox"
@@ -234,7 +234,7 @@
 					   value="block-scripts"
 					 />
 					 <label for="block-scripts"
-					   >Automatically block scripts detected by the plugin
+					   ><span>Automatically block scripts detected by the plugin</span>
 					   <a class="tooltip" href="#" data-tip="Tooltip info">
 						 <i class="question-mark-icn"></i>More info
 					   </a></label
@@ -252,7 +252,7 @@
 			 </fieldset>
 			 <section class="cs-options cs-options--privacy">
 				 <fieldset class="cs-options__block">
-				   <legend class="cs-options_title">Button style</legend>
+				   <legend class="cs-options__title">Button style</legend>
 				   <div class="radio-btn__wrapper cs-options__items-wrapper">
 					 <div class="radio-btn radio-btn--privacy">
 					   <input
@@ -277,24 +277,26 @@
 				   </div>
 				 </fieldset>
 				 <fieldset class="cs-options__block">
-				   <legend class="cs-options_title">Button position</legend>
+				   <legend class="cs-options__title">Button position</legend>
 				   <div class="cs-options__items-wrapper">
-					 <div class="cs-options__item-container">
-					   <input
-						 type="radio"
-						 name="cs-privacy-btn-pos"
-						 id="privacy-in-footer"
-						 value="privacy-in-footer"
-					   />
-					   <label for="privacy-in-footer">Put automatically button on footer</label>
-					 </div>
-					 <input
-						 type="radio"
-						 name="cs-privacy-btn-pos"
-						 id="privacy-manual-btn"
-						 value="privacy-manual-btn"
-					   />
-					   <label for="privacy-manual-btn">Integrate button manually</label>
+					 	<div class="cs-options cs-options__radioItem">
+							<input
+								type="radio"
+								name="cs-privacy-btn-pos"
+								id="privacy-in-footer"
+								value="privacy-in-footer"
+							/>
+					   		<label for="privacy-in-footer">Put automatically button on footer</label>
+					 	</div>
+					 	<div class="cs-options cs-options__radioItem">
+							<input
+							type="radio"
+							name="cs-privacy-btn-pos"
+							id="privacy-manual-btn"
+							value="privacy-manual-btn"
+							/>
+							<label for="privacy-manual-btn">Integrate button manually</label>
+						</div>
 					 </div>
 				   </div>
 				 </fieldset>
