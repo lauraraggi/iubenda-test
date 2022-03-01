@@ -1,0 +1,49 @@
+@use "../abstracts";
+
+/*** 
+	Progress Ring Styles
+***/
+
+.progress-ring {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__title {
+    p {
+      font-weight: bold;
+      color: abstracts.$dark-grey;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__svg {
+    position: relative;
+  }
+
+  &__percentage {
+    position: absolute;
+    font-size: 1.6rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+
+    span {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__circle {
+    &--active {
+      transition: 0.35s stroke-dashoffset;
+      // axis compensation
+      transform: rotate(-90deg);
+      transform-origin: 50% 50%;
+    }
+  }
+}
