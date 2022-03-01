@@ -5,10 +5,42 @@
 ***/
 
 .cs-form {
-  padding: 0 3rem;
-
   &__container {
-    padding: 2rem 0;
+    padding: 2rem 3rem;
+  }
+
+  &-buttons {
+    padding: 3rem 0;
+    border-top: 1px solid abstracts.$border-color;
+    &__wrapper {
+      padding: 0 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      input[type="submit"] {
+        @extend .customSubmit;
+        background-color: abstracts.$iub-green;
+        color: #fff;
+        padding: 1rem 2rem;
+        flex: 0 0 30rem;
+        border-radius: 20px;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      input[type="reset"] {
+        @extend .customSubmit;
+        background-color: transparent;
+        color: #757575;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
   }
 }
 
