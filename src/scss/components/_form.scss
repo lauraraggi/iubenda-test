@@ -20,6 +20,15 @@
   display: flex;
   flex: 0 1 14rem;
 
+  & label {
+    flex: 0 0 14rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 1px solid abstracts.$border-color;
+    border-radius: abstracts.$border-radius;
+    transition: 0.3s;
+  }
+
   &__title {
     position: absolute;
     bottom: 0;
@@ -27,7 +36,6 @@
     text-align: center;
     display: block;
     font-size: 1.3rem;
-    font-weight: bold;
   }
 
   &.radio-btn--theme {
@@ -36,6 +44,7 @@
     & label {
       height: 8rem;
       background-position: 25px 10px;
+      text-indent: -9999px;
     }
 
     & .label--dark {
@@ -49,9 +58,11 @@
 
   &.radio-btn--privacy {
     padding-bottom: 2rem;
+
     & label {
       height: 5rem;
       background-position: 15px 10px;
+      text-indent: -9999px;
     }
 
     & .label--dark {
@@ -60,6 +71,29 @@
 
     & .label--light {
       background-image: url(../img/fake_button_light.png);
+    }
+  }
+
+  &.radio-btn--inlineIcn {
+    svg {
+      height: 3.2rem;
+      width: 3.2rem;
+      margin-right: 0.8rem;
+    }
+  }
+
+  &.radio-btn--small {
+    label {
+      height: 5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.3rem;
+      position: relative;
+    }
+
+    & input:checked + label {
+      color: abstracts.$iub-green;
     }
   }
 
@@ -84,16 +118,5 @@
       border-color: abstracts.$iub-green;
       box-shadow: 0 0 0 3px abstracts.$mint;
     }
-  }
-
-  & label {
-    flex: 0 0 14rem;
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    text-indent: -9999px;
-    border: 1px solid abstracts.$border-color;
-    border-radius: abstracts.$border-radius;
-    transition: 0.3s;
   }
 }
