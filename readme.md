@@ -16,3 +16,4 @@ npm run start
 - Cross Browser checks
 - Implement Position select button
 - Implement Tooltip functionality
+- Refactor SASS
