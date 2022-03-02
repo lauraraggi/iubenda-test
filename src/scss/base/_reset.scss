@@ -44,9 +44,20 @@ legend {
 input[type="checkbox"],
 input[type="radio"],
 input[type="submit"],
-input[type="reset"] {
+input[type="reset"],
+select {
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
   cursor: pointer;
+  /* For iOS < 15 to remove gradient background */
+  background-color: #fff;
+  /* Not removed via appearance */
+  margin: 0;
+}
+
+select {
+  border: none;
+  background-color: transparent;
+  padding: 0 1em 0 0;
 }
