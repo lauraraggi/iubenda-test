@@ -21,7 +21,15 @@ class ProgressRing {
     this.circle.style.strokeDashoffset = `${circumference}`;
     const offset = circumference - (percentage / 100) * circumference;
     this.circle.style.strokeDashoffset = offset;
-    this.percentageText.childNodes[0].textContent = this.value;
+    this.percentageText.childNodes[0].textContent = percentage;
+    /** Set color */
+    if (percentage === 100) {
+      this.circle.style.stroke = "#00ca8d";
+    } else if (percentage === 0) {
+      this.circle.style.stroke = "#DEDEDE";
+    } else {
+      this.circle.style.stroke = "#df6e5e";
+    }
   }
 }
 
