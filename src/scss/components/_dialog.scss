@@ -14,6 +14,7 @@
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
   border-radius: abstracts.$border-radius;
   position: relative;
+  align-items: center;
 
   &__tab {
     padding: 1.5rem;
@@ -25,6 +26,7 @@
     color: abstracts.$iub-green;
     flex-direction: column;
     justify-content: center;
+    align-self: stretch;
 
     & svg {
       width: 4rem;
