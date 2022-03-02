@@ -15,7 +15,6 @@ class ProgressRing {
 
   setProgress(percentage) {
     const radius = this.circle.r.baseVal.value;
-    console.log(radius);
     const circumference = radius * 2 * Math.PI;
     this.circle.style.strokeDasharray = `${circumference} ${circumference}`;
     this.circle.style.strokeDashoffset = `${circumference}`;

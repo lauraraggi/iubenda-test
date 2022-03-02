@@ -13,7 +13,6 @@
   border: 1px solid abstracts.$border-color;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
   border-radius: abstracts.$border-radius;
-  align-items: center;
   position: relative;
 
   &__tab {
@@ -24,6 +23,8 @@
     display: flex;
     align-items: center;
     color: abstracts.$iub-green;
+    flex-direction: column;
+    justify-content: center;
 
     & svg {
       width: 4rem;
@@ -36,7 +37,7 @@
   }
 
   &__description {
-    padding: 0 5rem;
+    padding: 1rem 5rem;
   }
 
   &__close {
