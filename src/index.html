@@ -66,46 +66,60 @@
 			   <h2 class="cs-toggle__title">Add a cookie banner</h2>
 			 </fieldset>
 			 <!-- Target fieldset with cs-options class to disable in bunch -->
-			 <section class="cs-options cs-options--cookies">
-			   <fieldset class="cs-options__block">
-				 <legend class="cs-options__title">Position</legend>
-				 <!-- <img src="" alt="" class="cs-options__img" /> -->
-			   </fieldset>
-			   <fieldset class="cs-options__block">
-				 <legend class="cs-options__title">Theme</legend>			
-					<div class="radio-btn__wrapper cs-options__items-wrapper">
-					   <div class="radio-btn radio-btn--theme ">
-						 <input
-						   type="radio"
-						   name="cs-cookies-theme"
-						   id="dark-theme"
-						   value="dark-theme"
-						 />
-						 <label class="label--dark" for="dark-theme">Dark</label>
-						 <span class="radio-btn__title">Dark</span>
-					   </div>
-					   <div class="radio-btn radio-btn--theme">
-						 <input
-						   type="radio"
-						   name="cs-cookies-theme"
-						   id="light-theme"
-						   value="light-theme"
-						 />
-						 <label class="label--light" for="light-theme">Light</label>
-						 <span class="radio-btn__title">Light</span>
-					   </div>
-					   <div class="radio-btn radio-btn radio-btn--theme">
-						 <input
-						   type="radio"
-						   name="cs-cookies-theme"
-						   id="custom-theme"
-						   value="custom-theme"
-						 />
-						 <label for="custom-theme">Custom style</label>
-						 <span class="radio-btn__title">Custom style</span>
-					   </div>
-					</div>
-			   </fieldset>
+			 <section role="" class="cs-options cs-options--cookies">
+				 <div class="flex-grid">
+					 <div class="flex-grid-1-4 col">
+						<fieldset class="cs-options__block">
+							<legend class="cs-options__title">Position</legend>
+							<div class="cs-options__items-wrapper">
+								<select class="cookie-banner-position">
+									<option disabled selected value>  </option>
+									<option value="top">Top</option>
+									<option value="bottom">Bottom</option>
+									
+								</select>
+							</div>
+			   			</fieldset>
+					 </div>
+					 <div class="flex-grid-3-4 col">
+						<fieldset class="cs-options__block">
+						   <legend class="cs-options__title">Theme</legend>			
+							  <div class="radio-btn__wrapper cs-options__items-wrapper">
+								 <div class="radio-btn radio-btn--theme ">
+								   <input
+									 type="radio"
+									 name="cs-cookies-theme"
+									 id="dark-theme"
+									 value="dark-theme"
+								   />
+								   <label class="label--dark" for="dark-theme">Dark</label>
+								   <span class="radio-btn__title">Dark</span>
+								 </div>
+								 <div class="radio-btn radio-btn--theme">
+								   <input
+									 type="radio"
+									 name="cs-cookies-theme"
+									 id="light-theme"
+									 value="light-theme"
+								   />
+								   <label class="label--light" for="light-theme">Light</label>
+								   <span class="radio-btn__title">Light</span>
+								 </div>
+								 <div class="radio-btn radio-btn radio-btn--theme">
+								   <input
+									 type="radio"
+									 name="cs-cookies-theme"
+									 id="custom-theme"
+									 value="custom-theme"
+								   />
+								   <label for="custom-theme">Custom style</label>
+								   <span class="radio-btn__title">Custom style</span>
+								 </div>
+							  </div>
+						 </fieldset>
+					 </div>
+				 </div>
+			  
 			   <fieldset class="cs-options__block">
 				 <legend class="cs-options__title">Legislation</legend>
 				 <div class="radio-btn__wrapper cs-options__items-wrapper">
@@ -278,7 +292,7 @@
 				 </fieldset>
 				 <fieldset class="cs-options__block">
 				   <legend class="cs-options__title">Button position</legend>
-				   <div class="cs-options__items-wrapper">
+				   <div class="cs-options__items-wrapper cs-options__items-wrapper--inline">
 					 	<div class="cs-options cs-options__radioItem">
 							<input
 								type="radio"
@@ -288,7 +302,7 @@
 							/>
 					   		<label for="privacy-in-footer">Put automatically button on footer</label>
 					 	</div>
-					 	<div class="cs-options cs-options__radioItem">
+					 	<div class="cs-options  cs-options__radioItem">
 							<input
 							type="radio"
 							name="cs-privacy-btn-pos"
