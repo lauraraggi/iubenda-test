@@ -5,7 +5,9 @@
 ***/
 
 .dialog-box {
-  display: flex;
+  @media screen and (min-width: 31.5rem) {
+    display: flex;
+  }
   justify-content: space-between;
   font-size: 1.4rem;
   margin: 2.5rem 3rem;
