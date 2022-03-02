@@ -49,6 +49,36 @@ a {
   &__header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border-bottom: 1px solid abstracts.$border-color;
+  }
+}
+
+.info-card {
+  &__title {
+    a:link {
+      color: abstracts.$copy-black;
+      font-size: 1.8rem;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__subtitle {
+    color: abstracts.$light-grey;
+  }
+}
+
+a.readmore {
+  color: abstracts.$light-grey;
+  font-size: 1rem;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.8;
   }
 }

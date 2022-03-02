@@ -5,6 +5,10 @@
   align-items: center;
   margin-bottom: 2rem;
 
+  &:not(:first-child) {
+    margin-top: 5rem;
+  }
+
   &__title {
     margin-left: 30px;
   }

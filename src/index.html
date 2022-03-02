@@ -18,7 +18,7 @@
     <main class="cs-configurator wrapper">
       <header class="cs-configurator__header padding-section">
         <div class="info-card">
-          <a class="info-card__title" href="#">www.domain.com</a>
+          <h2 class="info-card__title"><a href="#" title="Link to website configuration main page">www.domain.com</a></h2>
           <p class="info-card__subtitle">Account & billing info</p>
         </div>
         <div class="progress-ring">
@@ -29,8 +29,6 @@
 				<svg class="progress-ring__svg" width="100" height="100">
         <circle class="progress-ring__circle" style="stroke: #DEDEDE;" cx="50" cy="50" r="34" fill="transparent" stroke-width="8"></circle>
 		<circle class="progress-ring__circle progress-ring__circle--active" style="stroke: #df6e5e;" cx="50" cy="50" r="34" fill="transparent" stroke-width="8"></circle>
-
-        <!-- <circle style="stroke: #2b6481;transition: stroke-dashoffset 1s linear;" cx="50" cy="50" r="30" fill="none" stroke-width="10" stroke-dashoffset="124.40706908215581" stroke-dasharray="414.68988" transform="rotate(-90.1 72 72)"></circle> -->
     </svg>
 				<p class="progress-ring__percentage">
 					<span>%</span></p>      
@@ -71,12 +69,14 @@
 						<fieldset class="cs-options__block cs-options__block--cookies">
 							<legend class="cs-options__title">Position</legend>
 							<div class="cs-options__items-wrapper">
+								<!-- TODO -->
 								<select class="cookie-banner-position">
 									<option disabled selected value>  </option>
 									<option value="top">Top</option>
 									<option value="bottom">Bottom</option>
-									
+
 								</select>
+								<!-- TODO -->
 							</div>
 			   			</fieldset>
 					 </div>
@@ -234,10 +234,10 @@
 					 />
 					 <label for="google-amp"
 					   ><span>Enable Google Amp support</span>
-					   <a class="tooltip" href="#" data-tip="Tooltip info">
-						 <i class="question-mark-icn"></i>More info
-					   </a></label
-					 >
+					</label>
+					<a class="tooltip" href="#" data-tip="Tooltip info" title="More info link">
+						    <svg><use class="question-mark-icn" xlink:href="./img/sprite-icn.svg#questionMark"></use></svg>
+					   </a>
 				   </div>
 				   <div class="cs-options cs-options__checkboxItem">
 					 <input
@@ -248,10 +248,11 @@
 					 />
 					 <label for="block-scripts"
 					   ><span>Automatically block scripts detected by the plugin</span>
-					   <a class="tooltip" href="#" data-tip="Tooltip info">
-						 <i class="question-mark-icn"></i>More info
-					   </a></label
+					   </label
 					 >
+					 <a class="tooltip" href="#" data-tip="Tooltip info" title="More info link">
+						    <svg><use class="question-mark-icn" xlink:href="./img/sprite-icn.svg#questionMark"></use></svg>
+					   </a>
 				   </div>
 				 </div>
 			   </fieldset>
