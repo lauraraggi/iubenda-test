@@ -59,17 +59,16 @@
       <form class="cs-form" id="cs-form">
 		 <section class="cs-form__container">
 			 <fieldset class="cs-form__field cs-toggle cs-toggle--cookies">   
-			   <input type="checkbox" class="cs-toogle__switch" id="cookies-switch" name="cookies-switch" />
+			   <input type="checkbox" data-type="cs-options__block--cookies" class="cs-toogle__switch" id="cookies-switch" name="cookies-switch" />
 			   <label class="cs-toggle__label" for="cookies-switch">		 
 				 Toggle cookie banner
 			   </label>
 			   <h2 class="cs-toggle__title">Add a cookie banner</h2>
 			 </fieldset>
-			 <!-- Target fieldset with cs-options class to disable in bunch -->
-			 <section role="" class="cs-options cs-options--cookies">
+			 <section class="cs-options cs-options--cookies">
 				 <div class="flex-grid">
 					 <div class="flex-grid-1-4 col">
-						<fieldset class="cs-options__block">
+						<fieldset class="cs-options__block cs-options__block--cookies">
 							<legend class="cs-options__title">Position</legend>
 							<div class="cs-options__items-wrapper">
 								<select class="cookie-banner-position">
@@ -82,7 +81,7 @@
 			   			</fieldset>
 					 </div>
 					 <div class="flex-grid-3-4 col">
-						<fieldset class="cs-options__block">
+						<fieldset class="cs-options__block cs-options__block--cookies">
 						   <legend class="cs-options__title">Theme</legend>			
 							  <div class="radio-btn__wrapper cs-options__items-wrapper">
 								 <div class="radio-btn radio-btn--theme ">
@@ -120,7 +119,7 @@
 					 </div>
 				 </div>
 			  
-			   <fieldset class="cs-options__block">
+			   <fieldset class="cs-options__block cs-options__block--cookies">
 				 <legend class="cs-options__title">Legislation</legend>
 				 <div class="radio-btn__wrapper cs-options__items-wrapper">
 				   <div class="radio-btn radio-btn--small">
@@ -152,7 +151,7 @@
 				   </div>
 				 </div>
 			   </fieldset>
-			   <fieldset class="cs-options__block">
+			   <fieldset class="cs-options__block cs-options__block--cookies">
 				 <legend class="cs-options__title">Require consent from</legend>
 				 <div class="radio-btn__wrapper cs-options__items-wrapper">
 				   <div class="radio-btn radio-btn--small radio-btn--inlineIcn">
@@ -175,7 +174,7 @@
 				   </div>
 				 </div>
 			   </fieldset>
-			   <fieldset class="cs-options__block">
+			   <fieldset class="cs-options__block cs-options__block--cookies">
 				 <legend class="cs-options__title">Banner buttons</legend>
 				 <div class="cs-options__items-wrapper">
 				   <div class="cs-options cs-options__checkboxItem">
@@ -200,7 +199,7 @@
 				   </div>
 				 </div>
 			   </fieldset>
-			   <fieldset class="cs-options__block">
+			   <fieldset class="cs-options__block cs-options__block--cookies">
 				 <legend class="cs-options__title">Other options</legend>
 				 <div class="cs-options__items-wrapper">
 				   <div class="cs-options cs-options__checkboxItem">
@@ -257,15 +256,16 @@
 				 </div>
 			   </fieldset>
 			 </section>
+			 <!-- Privacy -->
 			  <fieldset class="cs-form__field cs-toggle cs-toggle--privacy-policy">   
-			   <input type="checkbox" class="cs-toogle__switch" id="privacy-switch" name="privacy-switch" />
+			   <input data-type="cs-options__block--privacy" type="checkbox" class="cs-toogle__switch" id="privacy-switch" name="privacy-switch" />
 			   <label class="cs-toggle__label" for="privacy-switch">		 
 				 Enable privacy policy button options 
 			   </label>
 			   <h2 class="cs-toggle__title">Add a privacy policy button</h2>
 			 </fieldset>
 			 <section class="cs-options cs-options--privacy">
-				 <fieldset class="cs-options__block">
+				 <fieldset class="cs-options__block cs-options__block--privacy">
 				   <legend class="cs-options__title">Button style</legend>
 				   <div class="radio-btn__wrapper cs-options__items-wrapper">
 					 <div class="radio-btn radio-btn--privacy">
@@ -290,7 +290,7 @@
 					 </div>
 				   </div>
 				 </fieldset>
-				 <fieldset class="cs-options__block">
+				 <fieldset class="cs-options__block cs-options__block--privacy">
 				   <legend class="cs-options__title">Button position</legend>
 				   <div class="cs-options__items-wrapper cs-options__items-wrapper--inline">
 					 	<div class="cs-options cs-options__radioItem">

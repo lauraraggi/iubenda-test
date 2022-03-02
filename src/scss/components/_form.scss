@@ -44,6 +44,12 @@
   }
 }
 
+fieldset:disabled {
+  -webkit-filter: grayscale(1); /* Webkit */
+  filter: gray; /* IE6-9 */
+  filter: grayscale(1); /* W3C */
+}
+
 .cs-options {
   font-size: 1.4rem;
   margin-bottom: 0.3rem;
